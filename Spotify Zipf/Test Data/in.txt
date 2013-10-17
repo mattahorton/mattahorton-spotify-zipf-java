@@ -1,0 +1,5 @@
+4 4 
+60 one
+30 two
+20 three
+15 four
