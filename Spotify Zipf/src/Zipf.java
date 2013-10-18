@@ -35,26 +35,11 @@ public class Zipf {
 			fi = in.nextLong();
 			si = in.next();
 			zi = songs.get(0).getZi()/trackCounter;
-			//qi = (double)fi/(double)zi;
 			qi = (double)fi * (double)trackCounter;
 			songs.add(new Song(fi,zi,si,qi,trackCounter++));
 		}
 	
 		Collections.sort(songs);
-		
-//		for(int i = 0; i < topTracksNum; i++){
-//			int highest = 0;
-//			
-//			for(int j = 1; j < songs.size(); j++){
-//				if(songs.get(j).getQi() > songs.get(highest).getQi()){
-//					highest = j;
-//				}
-//			}
-//				
-//			//System.out.println(songs.remove(highest).getSi());
-//	        writer.println(songs.remove(highest).getSi());
-//	        
-//		}
 		
 		for(int i = 0; i < topTracksNum; i++){
 			writer.println(songs.get(i).getSi());
